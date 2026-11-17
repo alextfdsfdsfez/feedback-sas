@@ -1,0 +1,156 @@
+/* Styles de l'application — ambiance métal */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #0b0b0b;
+  background-image: radial-gradient(circle at top, #3a0000 0%, #0b0b0b 60%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #e6e6e6;
+}
+
+.page {
+  position: relative; /* le contenu passe devant les chats du fond */
+  padding: 32px 16px;
+  text-align: center;
+}
+
+/* Titre massif, en majuscules, avec une lueur rouge */
+h1 {
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 56px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  text-shadow: 0 0 8px #ff1a1a, 3px 3px 0 #8b0000;
+  margin: 16px 0 32px;
+}
+
+/* Formulaire : champ et bouton côte à côte */
+.formulaire {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.formulaire input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #f2f2f2;
+  background-color: #1a1a1a;
+  border: 2px solid #555555;
+  border-radius: 2px;
+}
+
+.formulaire input::placeholder {
+  color: #8a8a8a;
+}
+
+.formulaire input:focus {
+  outline: none;
+  border-color: #d10000;
+}
+
+.formulaire button {
+  padding: 8px 16px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #b30000;
+  border: 2px solid #ff1a1a;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.formulaire button:hover {
+  background-color: #d10000;
+}
+
+/* Liste des idées */
+.liste-idees {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.liste-idees li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+/* Un chat rebelle devant chaque idée */
+.liste-idees li::before {
+  content: '😼';
+  margin-right: 8px;
+}
+
+/* Chats dispersés en fond de page, discrets et non cliquables */
+.fond-chats {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fond-chats span {
+  position: absolute;
+  font-size: 48px;
+  opacity: 0.25;
+  filter: grayscale(1) brightness(1.6);
+}
+
+/* Widget météo : sous le formulaire sur petit écran */
+.widget-meteo {
+  max-width: 480px;
+  margin: 0 auto 24px;
+  padding: 16px;
+  text-align: center;
+  background-color: #141414;
+  border: 2px solid #b30000;
+  border-radius: 2px;
+}
+
+.widget-meteo h2 {
+  margin: 0 0 8px;
+  font-family: Impact, 'Arial Black', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ff1a1a;
+}
+
+.widget-meteo p {
+  margin: 4px 0;
+}
+
+.meteo-icone {
+  font-size: 48px;
+}
+
+.meteo-temperature {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.meteo-details {
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+/* Sur grand écran : le widget se fixe sur le côté gauche */
+@media (min-width: 1280px) {
+  .widget-meteo {
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    width: 220px;
+    margin: 0;
+  }
+}
