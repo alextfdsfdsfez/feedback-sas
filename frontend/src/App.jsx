@@ -2,6 +2,9 @@
 import { useState } from 'react'
 import './App.css'
 
+// Nom de l'application, qui change selon l'environnement (fichiers .env)
+const nomApplication = import.meta.env.VITE_APP_NAME
+
 function App() {
   // Texte en cours de saisie dans le champ
   const [titreSaisi, setTitreSaisi] = useState('')
@@ -19,7 +22,7 @@ function App() {
 
   return (
     <main className="page">
-      <h1>Feedback Hub</h1>
+      <h1>{nomApplication}</h1>
 
       {/* Formulaire de saisie d'une idée */}
       <form className="formulaire" onSubmit={ajouterIdee}>
