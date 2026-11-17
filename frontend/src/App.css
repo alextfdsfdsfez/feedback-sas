@@ -10,3 +10,44 @@ body {
   padding: 32px 16px;
   text-align: center;
 }
+
+/* Formulaire : champ et bouton côte à côte */
+.formulaire {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.formulaire input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+}
+
+.formulaire button {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2f5bd3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Liste des idées */
+.liste-idees {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.liste-idees li {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
