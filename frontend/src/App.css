@@ -1,0 +1,12 @@
+/* Styles de l'application */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.page {
+  padding: 32px 16px;
+  text-align: center;
+}
